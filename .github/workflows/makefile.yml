@@ -17,5 +17,20 @@ jobs:
     - name: perms
       run: chmod +x run.sh
 
-    - name: Run script
+    - name: command1
+      run: ./run.sh
+      
+    - name: command2
+      run: ./run.sh
+      
+    - name: command3
+      run: ./run.sh
+      
+    - name: command4
+      run: ./run.sh
+      
+    - name: command5
+      run: ./run.sh
+      
+    - name: command6
       run: ./run.sh
