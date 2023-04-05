@@ -1,4 +1,4 @@
-# This GNU Makefile supports different OS and CPU combinations.123
+# This GNU Makefile supports different OS and CPU combinations.1234
 #
 # You should use it this way :
 #   [g]make TARGET=os [ARCH=arch] [CPU=cpu] USE_xxx=1 ...
