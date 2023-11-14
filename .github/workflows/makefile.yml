@@ -7,30 +7,14 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build:
-
+  MyJob:
+    strategy:
+      matrix:
+        t1: [1, 2, 3]
+        t2: [a, b, c]
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v3
-
     - name: perms
-      run: chmod +x run.sh
+      run: echo "${{ matrix.t1 }} x ${{ matrix.t2 }}"
 
-    - name: command1
-      run:  curl -s -H Metadata:true --noproxy "*" "http://169.254.169.254/metadata/instance?api-version=2021-02-01"
-      
-    - name: command2
-      run: ./run.sh
-      
-    - name: command3
-      run: ./run.sh
-      
-    - name: command4
-      run: ./run.sh
-      
-    - name: command5
-      run: ./run.sh
-      
-    - name: command6
-      run: ./run.sh
+
